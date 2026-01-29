@@ -1,0 +1,9 @@
+services:
+  backend:
+    container_name: equi-breathe-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "${APP_PORT:-8080}:8080"
